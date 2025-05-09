@@ -4,17 +4,21 @@
 ## Interfaces
 Interfaces are declared using the interface keyword and are primarily used to define object shapes.
 ## Syntax
+```javascript
 interface User {
   name: string;
   age: number;
 }
+```
 ## Types
 Types are declared using the type keyword and can represent not just objects but also primitives, unions, tuples, and more.
 ## Syntax
+```javascript
 type User = {
   name: string;
   age: number;
 };
+```
 
 **Key Difference:**
 # Interfaces are strictly for object shapes.
@@ -46,15 +50,16 @@ function formatId(id: string | number) {
     return id.toFixed(2);
   }
 }
-```
 console.log(formatId("abc123"));
 console.log(formatId(3.14159));
+```
 ##Key Use Case:
 * Handling API responses that could be string or number.
 * Supporting multiple input types in a function
 
 ## **Intersection Types (&)**
 An intersection type combines multiple types into one. Suppose we have a User and Permissions type, and we want a type that has both:
+```javascript
 type User = {
   name: string;
   email: string;
@@ -70,6 +75,7 @@ const admin: AdminUser = {
   canEdit: true,
   canDelete: false,
 };
+```
 ##Key Use Case:
 * Extending existing types without modifying them.
 * Combining multiple interfaces into a single type.
