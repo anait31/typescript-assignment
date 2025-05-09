@@ -1,4 +1,4 @@
-// 1
+
 function formatString(input: string, toUpper?: boolean): string {
     if (toUpper === false) {
         return input.toLowerCase();
@@ -7,10 +7,9 @@ function formatString(input: string, toUpper?: boolean): string {
     }
 }
 
-console.log(formatString("Hello"));
-console.log(formatString("Hello", true));
-console.log(formatString("Hello", false));
-// 2
+// console.log(formatString("Hello"));
+// console.log(formatString("Hello", true));
+// console.log(formatString("Hello", false));
 
 function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[] {
     const filteredByRatings = items.filter((item: { title: string, rating: number }) => item.rating >= 4);
@@ -23,10 +22,9 @@ const books = [
     { title: "Book C", rating: 5.0 }
 ];
 
-const result = filterByRating(books);
-console.log(result)
+// const result = filterByRating(books);
+// console.log(result)
 
-// 3
 function concatenateArrays<T>(...arrays: T[][]): T[] {
     let result: T[] = [];
     for (const arr of arrays) {
@@ -36,7 +34,6 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
     return result;
 }
 
-// 4
 class Vehicle {
     private make: string;
     private year: number;
@@ -62,11 +59,10 @@ class Car extends Vehicle {
     }
 }
 
-const myCar = new Car("Toyota", 2020, "Corolla");
-myCar.getInfo();
-myCar.getModel();
+// const myCar = new Car("Toyota", 2020, "Corolla");
+// myCar.getInfo();
+// myCar.getModel();
 
-// 5
 function processValue(value: string | number): number {
     if (typeof value === 'string') {
         return value.length;
@@ -75,12 +71,10 @@ function processValue(value: string | number): number {
     }
 }
 
-// Example usage:
-console.log(processValue("hello")); // Output: 5
-console.log(processValue(10));      // Output: 20
+console.log(processValue("hello"));
+console.log(processValue(10));
 
 
-// 6
 interface Product {
     name: string;
     price: number;
@@ -101,7 +95,6 @@ interface Product {
     return mostExpensive;
   }
 
-//   7
 enum Day {
     Monday,
     Tuesday,
@@ -126,11 +119,10 @@ enum Day {
     }
   }
   
-  // Examples
-  console.log(getDayType(Day.Monday));   // Output: "Weekday"
-  console.log(getDayType(Day.Sunday));   // Output: "Weekend"
+  // console.log(getDayType(Day.Monday));
+  // console.log(getDayType(Day.Sunday));
 
-//   8
+
 async function squareAsync(n: number): Promise<number> {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -139,10 +131,10 @@ async function squareAsync(n: number): Promise<number> {
         } else {
           resolve(n * n);
         }
-      }, 1000); // 1 second delay
+      }, 1000);
     });
   }
   
   // Examples
-  squareAsync(4).then(console.log);        // Output after 1s: 16
-  squareAsync(-3).catch(console.error);    // Output: Error: Negative number not allowed
+  squareAsync(4).then(console.log);
+  squareAsync(-3).catch(console.error);
