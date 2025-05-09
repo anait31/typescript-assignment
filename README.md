@@ -21,8 +21,8 @@ type User = {
 ```
 
 **Key Difference:**
-# Interfaces are strictly for object shapes.
-# Types are more flexible and can define unions, intersections, and literal types.
+## Interfaces are strictly for object shapes.
+## Types are more flexible and can define unions, intersections, and literal types.
 
 # When to Use Interfaces vs. Types?
 Use Interfaces When ||	Use Types When
