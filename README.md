@@ -38,6 +38,7 @@ TypeScript enhances JavaScript by adding a powerful type system. Two of its most
 
 ##. **Union Types (|)**
 A union type allows a variable to be one of several types. Suppose we have a function that accepts either a string or a number:
+```javascript
 function formatId(id: string | number) {
   if (typeof id === "string") {
     return id.toUpperCase();
@@ -45,7 +46,7 @@ function formatId(id: string | number) {
     return id.toFixed(2);
   }
 }
-
+```
 console.log(formatId("abc123"));
 console.log(formatId(3.14159));
 ##Key Use Case:
